@@ -8,10 +8,11 @@ import org.springframework.web.bind.annotation.ResponseBody;
 @Controller
 public class BoardController {
 
-    // GetMapping으로 맵핑된 url주소로 들어 갔을 때 @ResponseBody에 의해 "helllo world"가 반환됨
-    @GetMapping("/")
-    @ResponseBody
-    public String main(){
-        return "hello world";
+    @GetMapping("/board/write")     // localhost:8080/board/write <-- 어떤 url로 접근할것인지 지정하는 어노테이션
+    public String boarWriteForm(){
+        return "boardwrite";      //return 어떤 뷰파일(html 파일로 보내 줄것인가)
     }
+
+
+
 }
